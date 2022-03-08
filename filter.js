@@ -1,4 +1,4 @@
-  
+
 /**
  * To run this file in Gitpod, use the 
  * command node filter.js in the terminal
@@ -20,6 +20,12 @@ const people = [
     age: 18,
   },
 ];
+
+const oldEnough = people.filter(person => person.age >= 21);
+console.log(oldEnough);
+
+const findPaul = people.filter(person => person.name === 'Paul');
+console.log(findPaul);
 
 
 // Complex Filtering
@@ -55,3 +61,11 @@ const students = [
     ]
   },
 ];
+
+const has5YearsExp = skills => skills.yrsExperience >= 5;
+const hasStrongSkills = student => student.skills.filter(has5YearsExp).length > 0;
+const candidates = students.filter(hasStrongSkills);
+
+
+console.log(candidates);
+
